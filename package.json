@@ -9,8 +9,10 @@
     "buildw": "npx webpack --watch",
     "wds": "webpack-dev-server",
     "lint": "npx eslint --debug src/",
-    "lint:write": "npx eslint --debug src/ --fix"
-  },
+    "lint:write": "npx eslint --debug src/ --fix",
+    "precommit": "lint-staged"
+  }
+},
   "author": "kiromoto",
   "license": "ISC",
   "husky": {
