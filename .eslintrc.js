@@ -4,14 +4,14 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "standard"
+        "airbnb"
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": 6,
         "sourceType": "module"
     },
     "rules": {
