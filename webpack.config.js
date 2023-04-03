@@ -30,7 +30,7 @@ let config = {
             {
                 test: /\.js$/,
                 exclude: '/node_modules/',
-                use: 'eslint-loader',
+                loader: "eslint-loader"
             }
 
         ]
