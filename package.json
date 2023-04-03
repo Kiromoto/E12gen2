@@ -1,30 +1,4 @@
 {
-  "name": "e12gen2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "buildw": "npx webpack --watch",
-    "wds": "webpack-dev-server",
-    "lint": "npx eslint --debug src/",
-    "lint:write": "npx eslint src/ --fix",
-    "precommit": "lint-staged"
-  }
-},
-  "author": "kiromoto",
-  "license": "ISC",
-  "husky": { "hooks":
-                    {"pre-commit": "lint:write"}
-},
-  "lint-staged": {
-"*.(js|jsx)":
-[
-"npm run lint:write",
-"git add"
-]
-},
 "devDependencies": {
 "css-loader": "^6.7.3",
 "eslint": "^8.37.0",
@@ -39,7 +13,28 @@
 "webpack-cli": "^5.0.1",
 "webpack-dev-server": "^4.13.2"
 },
-"dependencies": {
-"eslint-loader": "^4.0.2"
+  "name": "e12gen2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-loader": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "buildw": "npx webpack --watch",
+    "wds": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiromoto/E12gen2.git"
+  },
+  "author": "kiromoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiromoto/E12gen2/issues"
+  },
+  "homepage": "https://github.com/Kiromoto/E12gen2#readme"
 }
-}
+
