@@ -1,12 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
-    mode: 'development',
+let config = {
+    mode: 'production',
     entry: './src/index.js',
     devServer: {
         static: './dist',
         port: 8080,
-        hot: true,
+        hot: false,
     },
     output: {
         filename: 'main.js'
@@ -26,8 +26,26 @@ module.exports = {
                     },
                     'css-loader',
                 ]
+            },
+            {
+                test: /\.js$/,
+                exclude: '/node_modules/',
+                use: 'eslint-loader',
             }
+
         ]
     },
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
+};
+
+module.exports = (env, argv) => {
+    if (argv.mode === 'development') {
+        config.devServer.hot = true;
+    }
+
+    if (argv.mode === 'production') {
+        config.devServer.hot = false;
+    }
+
+    return config;
 }
